@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'movie',
+    'blog',
+    'contact',
+    'aboutus',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +79,17 @@ WSGI_APPLICATION = 'kaconet.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'kaconet',
+        'USER' : 'root',
+        'PASSWORD' : '',
+        'HOST' : '127.0.0.1',
+        }
     }
-}
+
+
+
+
 
 
 # Password validation
